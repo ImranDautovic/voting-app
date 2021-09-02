@@ -2,6 +2,7 @@
 Voting App program that simulates US voting election process
 
 #Make sure you have downloaded and installed Node JS on your machine
+
 #Install Angular globally by "npm install -g @angular/cli"
 
 #Install server by running "npm i" in "/voting-app-server"
