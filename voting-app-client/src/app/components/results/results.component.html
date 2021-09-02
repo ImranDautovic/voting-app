@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center">
+  <div class="tabs w-50" *ngIf="cities">
+    <div class="tab" *ngFor="let city of cities; let i = index">
+      <input type="radio" [id]="i" [name]="i">
+      <label class="tab-label" [for]="i">{{ city.city }}</label>
+      <div class="tab-content">
+        <table class="w-100">
+          <th> Name </th>
+          <th> Votes </th>
+          <th> Percentage </th>
+          <th> Error </th>
+          <tr *ngFor="let candidate of city.data">
+            <td> {{ candidate.candidate }} </td>
+            <td> {{ candidate.votes }} </td>
+            <td> {{ candidate.percentage ? (candidate.percentage + '%') : '' }} </td>
+            <td> {{ candidate.error ? 'YES' : '' }} </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
